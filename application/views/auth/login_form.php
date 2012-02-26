@@ -30,9 +30,9 @@ $captcha = array(
 	'id'	=> 'captcha',
 	'maxlength'	=> 8,
 );
+echo form_open($this->uri->uri_string()); 
 ?>
-<?php echo form_open($this->uri->uri_string()); ?>
-<table>
+<table id="login_form">
 	<tr>
 		<td><?php echo form_label($login_label, $login['id']); ?></td>
 		<td><?php echo form_input($login); ?></td>
@@ -83,11 +83,11 @@ $captcha = array(
 	<tr>
 		<td colspan="3">
 			<?php echo form_checkbox($remember); ?>
-			<?php echo form_label('Remember me', $remember['id']); ?>
-			<?php echo anchor('/auth/forgot_password/', 'Forgot password'); ?>
-			<?php if ($this->config->item('allow_registration', 'tank_auth')) echo anchor('/auth/register/', 'Register'); ?>
+			<?php echo form_label(lang('auth_remember_me'), $remember['id']); ?>
+			<?php echo anchor('/auth/forgot_password/', lang('auth_forgot_password')); ?>
+			<?php if ($this->config->item('allow_registration', 'tank_auth')) echo anchor('/auth/register/', lang('auth_register')); ?>
 		</td>
 	</tr>
 </table>
-<?php echo form_submit('submit', 'Let me in'); ?>
+<?php echo form_submit('submit', lang('auth_let_me_in')); ?>
 <?php echo form_close(); ?>
