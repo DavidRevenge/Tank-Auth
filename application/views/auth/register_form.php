@@ -36,7 +36,7 @@ $captcha = array(
 );
 ?>
 <?php echo form_open($this->uri->uri_string()); ?>
-<table>
+<table id="login_form">
 	<?php if ($use_username) { ?>
 	<tr>
 		<td><?php echo form_label('Username', $username['id']); ?></td>
@@ -55,7 +55,7 @@ $captcha = array(
 		<td style="color: red;"><?php echo form_error($password['name']); ?></td>
 	</tr>
 	<tr>
-		<td><?php echo form_label('Confirm Password', $confirm_password['id']); ?></td>
+		<td><?php echo form_label(lang('auth_confirm_password'), $confirm_password['id']); ?></td>
 		<td><?php echo form_password($confirm_password); ?></td>
 		<td style="color: red;"><?php echo form_error($confirm_password['name']); ?></td>
 	</tr>
@@ -84,17 +84,17 @@ $captcha = array(
 	<?php } else { ?>
 	<tr>
 		<td colspan="3">
-			<p>Enter the code exactly as it appears:</p>
+			<p><?php echo lang('auth_enter_code_exactly');?></p>
 			<?php echo $captcha_html; ?>
 		</td>
 	</tr>
 	<tr>
-		<td><?php echo form_label('Confirmation Code', $captcha['id']); ?></td>
+		<td><?php echo form_label(lang('auth_confirmation_code'), $captcha['id']); ?></td>
 		<td><?php echo form_input($captcha); ?></td>
 		<td style="color: red;"><?php echo form_error($captcha['name']); ?></td>
 	</tr>
 	<?php }
 	} ?>
 </table>
-<?php echo form_submit('register', 'Register'); ?>
+<?php echo form_submit('register', lang('auth_register')); ?>
 <?php echo form_close(); ?>
