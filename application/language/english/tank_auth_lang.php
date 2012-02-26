@@ -1,5 +1,11 @@
 <?php
 
+// Login
+$lang['auth_register'] = "Register";
+$lang['auth_forgot_password'] = "Forgot password";
+$lang['auth_remember_me'] = "Remember me";
+$lang['auth_remember_me'] = "Let me in";
+
 // Errors
 $lang['auth_incorrect_password'] = 'Incorrect password';
 $lang['auth_incorrect_login'] = 'Incorrect login';
