@@ -1,5 +1,16 @@
 <?php
 
+//Registration
+$lang['auth_confirm_password'] = "Confirm Password";
+$lang['auth_enter_code_exactly'] = "Enter the code exactly as it appears:";
+$lang['auth_confirmation_code'] = "Confirmation Code";
+
+// Login
+$lang['auth_register'] = "Register";
+$lang['auth_forgot_password'] = "Forgot password";
+$lang['auth_remember_me'] = "Remember me";
+$lang['auth_remember_me'] = "Let me in";
+
 // Errors
 $lang['auth_incorrect_password'] = 'Incorrect password';
 $lang['auth_incorrect_login'] = 'Incorrect login';
