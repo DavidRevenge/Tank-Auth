@@ -578,6 +578,14 @@ class Auth extends CI_Controller
 		}
 		return TRUE;
 	}
+	
+	/**
+	 * Alias of tank_auth->is_logged_in() - For ajax request
+	 */
+	function is_logged() 
+	{
+		$this->tank_auth->is_logged_in();
+	}
 
 }
 
